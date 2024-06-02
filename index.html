@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>{{ title }}</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="keranjang.html" class="active">keranjang</a></li>
+       <li><a href="game.html" class="active">game</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>{{ subtitle }}</h2>
+        <p>{{ description }}</p>
+        
+      </section>
+        <section>
+        <h2>{{ livejudul }}</h2>
+        <p>{{ live }}</p>
+        
+      </section>
+      <section>
+        <h2>{{ teamTitle }}</h2>
+        <ul>
+          <li v-for="(member, index) in team" :key="index">
+            <strong>{{ member.name }}</strong> - {{ member.role }}
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Your Company</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
